@@ -8,9 +8,10 @@ defmodule WhenisthatformeRecurse.Application do
   @impl true
   def start(_type, _args) do
     Teleplug.setup()
+
     children = [
-    {Bandit, plug: WhenisthatformeRecurse.Router},
-    {Tz.UpdatePeriodically, [interval_in_days: 7]}
+      {Bandit, plug: WhenisthatformeRecurse.Router},
+      {Tz.UpdatePeriodically, [interval_in_days: 7]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

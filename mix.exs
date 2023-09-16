@@ -14,7 +14,7 @@ defmodule WhenisthatformeRecurse.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger],
+      extra_applications: [:logger, :eex],
       mod: {WhenisthatformeRecurse.Application, []}
     ]
   end
@@ -24,15 +24,15 @@ defmodule WhenisthatformeRecurse.MixProject do
     [
       {:bandit, "~> 0.6"},
       {:tz, "~> 0.26.2"},
+      {:tz_extra, "~> 0.26.0"},
       {:castore, "~> 0.1"},
       {:mint, "~> 1.4"},
-       {:opentelemetry_api, "~> 1.1"},
+      {:opentelemetry_api, "~> 1.1"},
       {:opentelemetry_semantic_conventions, "~> 0.2"},
-  {:opentelemetry_exporter, "~> 1.6"},
-  {:opentelemetry, "~> 1.3"},
-  {:jason, ">= 0.0.0"},
-    {:teleplug, "~> 1.1.3"}
-
+      {:opentelemetry_exporter, "~> 1.6"},
+      {:opentelemetry, "~> 1.3"},
+      {:jason, ">= 0.0.0"},
+      {:teleplug, "~> 1.1.3"}
     ]
   end
 end
